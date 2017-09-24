@@ -17,12 +17,12 @@ end
 
 # some settings
 time = Time.new
-config_file = YAML.load_file('config.yaml')
+config_file = YAML.load_file(File.dirname(__FILE__)+'/config.yaml')
 url = (ARGV.length > 0 && ARGV[0].start_with?('http')) ? ARGV[0] : config_file['url']
 quiet = ARGV.include?("-q") || ARGV.include?("--quiet")
 
 # setup the output file
-log_file = File.open('testcrawler.log', 'a')
+log_file = File.open(File.dirname(__FILE__)+'/testcrawler.log', 'a')
 log_file.puts "#{time.inspect}\n\n"
 
 # crawl the site and gather urls, codes, etc.
