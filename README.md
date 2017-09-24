@@ -5,7 +5,7 @@ A simple web crawler that tests every url in a website for OK response
 ```
 url: 'https://example.com'
 ```
-This is the default url to test on. Change this to be the document root of the site you want to test.
+This is the default url to test on. Change this to be the document root of the site you want to test. Note that the url *must* start with http:// or https://
 ## usage
 Print the help page:
 ```
